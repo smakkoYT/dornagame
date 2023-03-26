@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIago3.io</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="timer" class="game-time">
+
+    </h1>
+ 
+  <div class="game-frame">
+    <form class="game-form">
+        <h1>
+            Hi ?
+        </h1>
+        <h2>
+            Welcome To Dorna Game!
+        </h2>
+        <Hr class="line-removed">
+            <Hr class="line-removed">
+                <Hr class="line-removed">
+                    <Hr class="line-removed">
+                        <Hr class="line">
+                            <Hr class="line-removed">
+                                <Hr class="line-removed">
+                                    <Hr class="line-removed">
+                                        <Hr class="line-removed">
+    </form>
+  </div>
+  <div class="game-button-row">
+    <button class="game-buttons">
+      Start
+    </button>    <button class="game-buttons">
+        Stop
+      </button>
+  </div>
+  <script>let startTime = Date.now();
+
+    function updateTime() {
+      const currentTime = Date.now();
+      const elapsedTime = currentTime - startTime;
+      const seconds = Math.floor(elapsedTime / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
+    
+      const displayTime = `${hours.toString().padStart(2, "0")}:${minutes
+        .toString()
+        .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+      document.getElementById("timer").textContent = displayTime;
+    }
+    
+    setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
